@@ -1,13 +1,13 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>detalhes</ion-title>
+<ion-header [translucent]="false">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalhes da Tarefa</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">detalhes</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <h2 class="ion-text-center">{{getTitulo()}}</h2>
+  <p class="ion-text-center">Status: {{tarefa?.Status ? 'Concluida':'Pendente'}}</p>
 </ion-content>
